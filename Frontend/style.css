@@ -1,0 +1,111 @@
+body {
+  font-family: sans-serif;
+  background: #f5f5fa;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  margin: 2rem;
+}
+h2, h3 {
+  color: #76df57;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1em;
+}
+th, td {
+  border: 1px solid #ccc;
+  padding: 0.6em;
+  text-align: left;
+}
+.button, button {
+  background: #d57aae;
+  color: #fff;
+  border: none;
+  padding: 0.5em 1.2em;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 0.8em;
+}
+.button:hover, button:hover {
+  background: #b54c8c;
+}
+form label {
+  display: block;
+  margin: 0.7em 0 0.2em 0;
+}
+input, select, textarea {
+  width: 100%;
+  padding: 0.5em;
+  margin-bottom: 0.5em;
+  box-sizing: border-box;
+}
+
+
+/* spezifisch Dashboard */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.stat-card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 1.2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+.stat-label {
+  display: block;
+  font-size: 0.95rem;
+  color: #666;
+  margin-bottom: 0.5rem;
+}
+
+.stat-value {
+  display: block;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #76df57;
+}
+
+
+/* spezifisch push to talk 
+.ptt-box {
+  margin-top: 2rem;
+  max-width: 420px;
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.talkButton {
+  background: #9FD4A3;
+  color: white;
+  border: none;
+  padding: 1rem 1.5rem;
+  border-radius: 12px;
+  font-size: 1rem;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.talkButton.aktiv {
+  background: #d57aae;
+}
+
+.statusText {
+  margin-top: 1rem;
+  font-weight: bold;
+  color: #555;
+}
+  */

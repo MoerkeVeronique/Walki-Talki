@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8" />
+    <title>Push-to-Talk</title>
+    <link rel="stylesheet" href="header.css" />
+    <link rel="stylesheet" href="style.css" />
+   
+    <style>
+        .ptt-box {
+            text-align: center;
+            padding: 2rem;
+        }
+
+        #talkButton {
+            width: 160px;
+            height: 160px;
+            border: none;
+            border-radius: 9999px;
+            background: #76df57;
+            color: white;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            font-size: 14px;
+            font-weight: bold;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+            transition: transform 0.15s ease, background 0.15s ease;
+            margin: 0 auto;
+        }
+
+        #talkButton i {
+            width: 34px;
+            height: 34px;
+        }
+
+        #talkButton.aktiv {
+            background: #d9534f;
+            transform: scale(0.96);
+        }
+
+        #statusText {
+            margin-top: 18px;
+            font-size: 16px;
+            color: #333;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <header class="main-header">
+        <nav class="nav-buttons">
+            <a href="login.html">Logout</a>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="pushtotalk.html">Push-to-Talk</a>
+        </nav>
+        <img src="logo.png" alt="Walki-Talki" class="logo-img" />
+    </header>
+
+    <main>
+        <section class="ptt-box">
+            <h3>Push to Talk</h3>
+            <p>Halte den Button gedrückt, um zu sprechen.</p>
+
+            <button id="talkButton" type="button" aria-label="Gedrückt halten zum Sprechen">
+                <p style='font-size:34px; color:white'>&#128483 
+                    <br> HALTEN</p>
+                
+            </button>
+
+            <p id="statusText">Bereit</p>
+        </section>
+    </main>
+
+    <script>
+        lucide.createIcons();
+
+        const talkButton = document.getElementById("talkButton");
+        const statusText = document.getElementById("statusText");
+
+        function startTalk() {
+            talkButton.classList.add("aktiv");
+            statusText.textContent = "Sprechen läuft...";
+        }
+
+        function stopTalk() {
+            talkButton.classList.remove("aktiv");
+            statusText.textContent = "Bereit";
+        }
+
+        talkButton.addEventListener("pointerdown", startTalk);
+        talkButton.addEventListener("pointerup", stopTalk);
+        talkButton.addEventListener("pointerleave", stopTalk);
+        talkButton.addEventListener("pointercancel", stopTalk);
+    </script>
+</body>
+</html>
