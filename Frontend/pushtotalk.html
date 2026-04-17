@@ -22,7 +22,7 @@
             <h3>Push to Talk</h3>
             <p>Halte den Button gedrückt, um zu sprechen.</p>
 
-            <button class="talkButton" class="talkButton aktiv" type="button" aria-label="Gedrückt halten zum Sprechen">
+            <button id="talkButton" class="talkButton" type="button" aria-label="Gedrückt halten zum Sprechen">
                 <p>&#128483 
                     <br> HALTEN</p>
                 
@@ -33,8 +33,6 @@
     </main>
 
     <script>
-        lucide.createIcons();
-
         const talkButton = document.getElementById("talkButton");
         const statusText = document.getElementById("statusText");
 
