@@ -1,3 +1,4 @@
+<!-- {% load static %} -->
 <!DOCTYPE html>
 <html lang="de">
 <head>
@@ -5,6 +6,8 @@
     <title>Dashboard</title>
     <link rel="stylesheet" href="header.css" />
     <link rel="stylesheet" href="style.css" />
+    <!-- <link rel="stylesheet" href="{% static 'css/header.css' %}" /> -->
+    <!-- <link rel="stylesheet" href="{% static 'css/style.css' %}" /> -->
 </head>
 <body>
     <header class="main-header">
@@ -12,9 +15,14 @@
             <a href="login.html">Logout</a>
             <a href="dashboard.html">Dashboard</a>
             <a href="pushtotalk.html">Push-to-Talk</a>
-        
+            <!--
+            <a href="http://[2001:7c0:2320:2:f816:3eff:fe2f:e1ef]:8001/login/">Logout</a>
+		    <a href="http://[2001:7c0:2320:2:f816:3eff:fe2f:e1ef]:8001/dashboard/">Dashboard</a>
+		    <a href="http://[2001:7c0:2320:2:f816:3eff:fe2f:e1ef]:8001/pushtotalk/">Push-to-Talk</a>
+            -->
         </nav>
         <img src="logo.png" alt="Walki-Talki" class="logo-img" />
+        <!--<img src="{% static 'css/logo.png' %}" alt="Walki-Talki" class="logo-img" />-->
     </header>
 
   <main>

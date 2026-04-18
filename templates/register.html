@@ -1,3 +1,4 @@
+<!-- {% load static %} -->
 <!DOCTYPE html>
 <html lang="de">
 <head>
@@ -64,16 +65,18 @@ h1 {
   <div class="container">
      <div class="image-section">
       <img style = "width: auto; height: 200px" src="logo.png" alt="Walkie-Talkie" />
+      <!-- <img style = "width: auto; height: 200px" src="{% static 'css/logo.png' %}" alt="Walkie-Talkie" /> -->
     </div>
     
     <form method="POST" class="login-form">
+      <!-- {% csrf_token %} -->
       <input name="username" type="text" placeholder="Benutzername" required>
       <input name="password" placeholder="Passwort" required>
       <button type="submit" class="login-btn">Registrieren</button>
     </form>
     <br>
     <a style="display: block; font-size: 12px;"href="login.html">Zum Login</a>
-    
+    <!-- <a style="display: block; font-size: 12px;"href="http://[2001:7c0:2320:2:f816:3eff:fe2f:e1ef]:8000/login/">Zurück zum Login</a> -->
   </div>
 </body>
 </html>
